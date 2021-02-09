@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Realtime communication with WebRTC</title>
+
+  <link rel="stylesheet" href="/css/main.css" />
+
+</head>
+
+<body>
+
+  <h1>Realtime communication with WebRTC</h1>
+
+  <div id="videoCanvas">
+    <video id="camera" muted="" autoplay></video>
+    <video id="remotevideo" autoplay></video>
+    <canvas id="photo"></canvas>
+  </div>
+
+  <div id="buttons">
+    
+    <button id="startcall" onclick="CreateTheSignal()">call</button>
+    <div style="display:none"></div>
+    <button id="snap">Snap</button><span> then </span><button id="send">Send</button>
+    <span> or </span>
+    <button id="snapAndSend">Snap &amp; Send</button>
+    </div>
+  </div>
+
+  <div id="incoming">
+    <h2>Incoming photos</h2>
+    <div id="trail"></div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/lib/adapter.js"></script>
+  <!--<script src="ZingHRTC-sdk.js"></script>-->
+  
+  <script src="js/main.js"></script>
+  <script type="text/javascript">
+  
+  
+  
+  // var dd = [];
+  // dd.push(document.getElementById('camera'));
+  // dd.push(document.getElementById('remotevideo'));
+  // ZingHRTC.AddVideoElements(dd);
+  // ZingHRTC.session.getUserMedia({});
+  // ZingHRTC.createRoom("","bahubali");
+  // ZingHRTC.session.attachMediaStream(dd);
+  </script>
+
+</body>
+
+</html>
