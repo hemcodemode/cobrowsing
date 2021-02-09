@@ -69,7 +69,7 @@
 <div id="fakeScroll">
   <div id="emptycontent"></div>
 </div>
- <script src="/socket.io/socket.io.js"></script>
+ <script src="socket.io/socket.io.js"></script>
  <script type="text/javascript">
 var socket = null;
 var isInitiator = false;
@@ -86,7 +86,7 @@ function getUrlVars() {
 }
 function CreateTheSignal(){
   // Connect to the signaling server
-  socket = io.connect();
+  socket = io.connect({path:'/cobrowse/socket.io',"force new connection":true});
   socket.on('ipaddr', function(ipaddr) {
     console.log('Server IP address is: ' + ipaddr);
     // updateRoomURL(ipaddr);
