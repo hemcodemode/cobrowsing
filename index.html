@@ -96,7 +96,7 @@
       function CreateTheSignal() {
         // Connect to the signaling server
         socket = io.connect({
-          path: location.pathname + "/socket.io",
+          path: "/cobrowse/socket.io",
           "force new connection": true,
         });
         socket.on("ipaddr", function (ipaddr) {
