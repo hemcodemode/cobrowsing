@@ -516,9 +516,9 @@ io.sockets.on("connection", function (socket) {
     console.log("Room " + room + " now has " + numClients + " client(s)");
 
     if (rooms[room]) {
-      if (rooms[room].length == 2) {
-        return false;
-      }
+      // if (rooms[room].length == 2) {
+      //   return false;
+      // }
       socket.join(room);
       log("Client ID " + socket.id + " joined room " + room);
       rooms[room].push(socket.id);
